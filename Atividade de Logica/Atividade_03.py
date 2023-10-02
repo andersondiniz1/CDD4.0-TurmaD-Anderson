@@ -1,4 +1,4 @@
-# Crie um código que leia a idade de uma pessoa e diga em qual ano ela nasceu:
+# 03. Crie um código que leia a idade de uma pessoa e diga em qual ano ela nasceu:
 
 verificador = "s"
 while verificador == "s" or verificador == "S":  

@@ -1,4 +1,4 @@
-# Crie um algoritmo que receba 3 números e informe qual o maior entre eles.
+# 04. Crie um algoritmo que receba 3 números e informe qual o maior entre eles.
 
 verificador = "s"
 while verificador == "s" or verificador == "S": 

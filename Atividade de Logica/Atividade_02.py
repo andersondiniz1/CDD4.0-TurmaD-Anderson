@@ -1,4 +1,4 @@
-# Crie um código que leia um número diferente de zero e diga se este número é positivo ou negativo:
+# 02. Crie um código que leia um número diferente de zero e diga se este número é positivo ou negativo:
 
 verificador = "s"
 while verificador == "s" or verificador == "S":    

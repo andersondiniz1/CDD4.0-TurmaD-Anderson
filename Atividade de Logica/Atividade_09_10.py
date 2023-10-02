@@ -1,4 +1,5 @@
-# Faça um código que receba um número inteiro e mostre o seu antecessor.
+# 09. Faça um código que receba um número inteiro e mostre o seu antecessor.
+# 10. Faça um Algoritmo que receba um número inteiro e mostre o seu sucessor.
 
 verificador = "s"
 while verificador == "s" or verificador == "S":
