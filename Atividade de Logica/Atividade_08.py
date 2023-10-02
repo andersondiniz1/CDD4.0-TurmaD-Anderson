@@ -1,7 +1,8 @@
-# Faça um algoritmo que receba 2 notas e calcule a média aritmética:
+# Faça um código que receba 4 números e realize a soma deles e a média entre eles. e mostre os resultados.
 
-contador = "s"
-while contador == "s" or contador == "S":    
+verificador = "s"
+while verificador == "s" or verificador == "S":    
+
     quantidade = int(input("Quantas notas você quer inserir? "))
     while quantidade <= 1:
         quantidade = int(input("Deve ser maior que 1, Digite novamente quantas notas você quer inserir? "))
@@ -16,5 +17,6 @@ while contador == "s" or contador == "S":
 
     media = soma / quantidade
     print(f"Sua média é: {media:.2f}")
-    contador = input("Deseja fazer uma nova média? (s/n)")
+    
+    verificador = input("Deseja fazer uma nova média? (s/n)")
 print("Encerrando programa...")
