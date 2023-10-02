@@ -24,7 +24,10 @@ while verificador == "s" or verificador == "S":
         area = (base * altura) / 2
         print(f"A area do triangulo é: {area}.")
         ops = "n"
-        verificador = input("Deseja fazer uma nova verificação? (s/n)")
+        verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+        while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+            verificador = input("Oplção invalida, tente novamente...\n"
+                                "Deseja fazer um novo calculo? (s/n)")
 
 
     elif ops == "r" or ops == "R": 
@@ -40,7 +43,10 @@ while verificador == "s" or verificador == "S":
         area = base * altura
         print(f"A area do retângulo é: {area}.")
         ops = "n"
-        verificador = input("Deseja fazer uma nova verificação? (s/n)")
+        verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+        while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+            verificador = input("Oplção invalida, tente novamente...\n"
+                                "Deseja fazer um novo calculo? (s/n)")
     
     elif ops == "n" or ops == "N": 
         verificador = "n"

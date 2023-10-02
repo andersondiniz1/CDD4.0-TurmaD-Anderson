@@ -14,5 +14,9 @@ while verificador == "s" or verificador == "S":
     else:
         print(f"O maior número entre {numero1}, {numero2} e {numero3} é {numero3}.")
         
-    verificador = input("Deseja fazer uma nova verificação? (s/n)")
+    verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+    while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+        verificador = input("Oplção invalida, tente novamente...\n"
+                            "Deseja fazer um novo calculo? (s/n)")
+        
 print("Encerrando programa...")

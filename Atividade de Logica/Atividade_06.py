@@ -12,5 +12,9 @@ while verificador == "s" or verificador == "S":
     else:
         print(f"O número {numero} é igual a 10.")    
 
-    verificador = input("Deseja fazer uma nova verificação? (s/n)")
+    verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+    while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+        verificador = input("Oplção invalida, tente novamente...\n"
+                            "Deseja fazer um novo calculo? (s/n)")
+        
 print("Encerrando programa...")

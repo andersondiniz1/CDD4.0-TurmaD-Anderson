@@ -23,12 +23,18 @@ while verificador == "s" or verificador == "S":
             sucessor = numero + 1
             print(f"\nO sucessor do numero {numero} é: {sucessor}\n")
             verificador2 = "n"
-            verificador = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+            verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+            while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+                verificador = input("Oplção invalida, tente novamente...\n"
+                                    "Deseja fazer um novo calculo? (s/n)")
         elif ops == 3:
             antecessor = numero - 1
             print(f"\nO antecessor do numero {numero} é: {antecessor}\n")
             verificador2 = "n"
-            verificador = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+            verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+            while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+                verificador = input("Oplção invalida, tente novamente...\n"
+                                    "Deseja fazer um novo calculo? (s/n)")
         elif ops == 0:
             print("")
             verificador = "n"

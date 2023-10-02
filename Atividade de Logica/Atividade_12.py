@@ -9,15 +9,15 @@ while verificador == "s" or verificador == "S":
 
     branco = int(input("\nDigite o número de votos brancos: "))
     while branco < 0 or branco > eleitores:
-        branco = int(input("\nDigite o número de votos brancos igual ou maior que 0: "))
+        branco = int(input("\nDigite o número de votos brancos igual ou maior que 0 e entre a quantidade de eleitores: "))
 
     nulo = int(input("\nDigite o número de votos nulos: "))
     while nulo < 0 or nulo > eleitores:
-        nulo = int(input("\nDigite o número de votos nulos igual ou maior que 0: "))
+        nulo = int(input("\nDigite o número de votos nulos igual ou maior que 0 e entre a quantidade de eleitores: "))
 
     valido = int(input("\nDigite o número de votos válidos: \n"))
     while valido < 0 or valido > eleitores:
-        valido = int(input("\nDigite o número de votos válidos igual ou maior que 0: \n"))
+        valido = int(input("\nDigite o número de votos válidos igual ou maior que 0 e entre a quantidade de eleitores: \n"))
 
     percentual_branco = (branco / eleitores) * 100
     percentual_nulo = (nulo / eleitores) * 100
@@ -29,6 +29,9 @@ while verificador == "s" or verificador == "S":
     print(f"Percentual de votos válidos: {percentual_valido:.2f}%")
     print("========================================================")
     
-    verificador = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+    verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+    while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+        verificador = input("Oplção invalida, tente novamente...\n"
+                            "Deseja fazer um novo calculo? (s/n)")
             
 print("Encerrando programa...")

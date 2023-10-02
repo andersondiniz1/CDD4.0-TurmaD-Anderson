@@ -8,8 +8,8 @@ while verificador == "s" or verificador == "S":
         hora_inicio = int(input("Digite a hora de início do jogo entre 1 e 24 horas: "))
 
     hora_fim = int(input("Digite a hora de fim do jogo: "))
-    while hora_fim <= 0 or hora_fim > 24:
-        hora_fim = int(input("Digite a hora de fim do jogo entre 1 e 24 horas: "))
+    while hora_fim <= 0 or hora_fim > 24 or hora_fim > hora_inicio:
+        hora_fim = int(input("Digite a hora de fim do jogo entre 1 e 24 horas e menor que a hora de inicio inicio: "))
 
     duracao = 0
     if hora_inicio == hora_fim:

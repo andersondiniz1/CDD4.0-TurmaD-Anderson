@@ -4,8 +4,8 @@ verificador = "s"
 while verificador == "s" or verificador == "S":
 
     idade = int(input("Digite sua idade: "))
-    while idade <= 0:
-        idade = int(input("Digite sua idade maior que 0: "))
+    while idade <= 0 or idade > 120:
+        idade = int(input("Digite a sua idade entre 1 e 120: "))
 
     mes_nascimento = int(input("Digite o mês de nascimento: "))
     while mes_nascimento <= 0 or mes_nascimento >= 13:
@@ -19,6 +19,9 @@ while verificador == "s" or verificador == "S":
 
     print(f"\nVocê tem: {idade_em_dias} dias de vida.")
 
-    verificador = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+    verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+    while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+        verificador = input("Oplção invalida, tente novamente...\n"
+                            "Deseja fazer um novo calculo? (s/n)")
             
 print("Encerrando programa...")

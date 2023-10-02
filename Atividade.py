@@ -1,7 +1,7 @@
 verificador = "s"
 while verificador == "s" or verificador == "S":
 
-    print("\n\n============================\n"
+    print("\n\n========================================================\n"
     "1  - Média aritmética               (1º e 8º questão)\n"
     "2  - Positivo ou negativo           (2º questão)\n"
     "3  - Ano que nasceu                 (3º questão)\n"
@@ -16,9 +16,9 @@ while verificador == "s" or verificador == "S":
     "12 - Ordem crescente                (15º questão)\n"
     "13 - Tempo jogo Xadrez              (16º questão)\n"
     "14 - Preço das Maças                (17º questão)\n"
-    "============================\n"
+    "========================================================\n"
     "0 - Encerrar Programa\n"
-    "============================\n")
+    "========================================================\n")
     ops = int(input("\nEscolha uma opção: "))
     print("")
 
@@ -68,8 +68,8 @@ while verificador == "s" or verificador == "S":
         while verificador1 == "s" or verificador1 == "S":  
             
             idade = int(input("Digite a sua idade: "))
-            while idade <= 0:
-                idade = int(input("Digite a sua idade maior que 0: "))
+            while idade <= 0 or idade > 120:
+                idade = int(input("Digite a sua idade entre 1 e 120: "))
 
             mes_atual = int(input("Digite o mês atual: "))
             while mes_atual < 1 or mes_atual > 12:
@@ -222,7 +222,7 @@ while verificador == "s" or verificador == "S":
                     sucessor = numero + 1
                     print(f"\nO sucessor do numero {numero} é: {sucessor}\n")
                     verificador2 = "n"
-                    verificador1 = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+                    verificador1 = input("\nDeseja fazer uma nova verificação? (s/n) \n")
                     while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
                         verificador1 = input("Oplção invalida, tente novamente...\n"
                                              "Deseja fazer um novo calculo? (s/n)")
@@ -230,7 +230,7 @@ while verificador == "s" or verificador == "S":
                     antecessor = numero - 1
                     print(f"\nO antecessor do numero {numero} é: {antecessor}\n")
                     verificador2 = "n"
-                    verificador1 = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+                    verificador1 = input("\nDeseja fazer uma nova verificação? (s/n) \n")
                     while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
                         verificador1 = input("Oplção invalida, tente novamente...\n"
                                              "Deseja fazer um novo calculo? (s/n)")
@@ -246,8 +246,8 @@ while verificador == "s" or verificador == "S":
         while verificador1 == "s" or verificador1 == "S":
 
             idade = int(input("Digite sua idade: "))
-            while idade <= 0:
-                idade = int(input("Digite sua idade maior que 0: "))
+            while idade <= 0 or idade > 120:
+                idade = int(input("Digite a sua idade entre 1 e 120: "))
 
             mes_nascimento = int(input("Digite o mês de nascimento: "))
             while mes_nascimento <= 0 or mes_nascimento >= 13:
@@ -261,7 +261,7 @@ while verificador == "s" or verificador == "S":
 
             print(f"\nVocê tem: {idade_em_dias} dias de vida.")
 
-            verificador1 = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+            verificador1 = input("\nDeseja fazer uma nova verificação? (s/n) \n")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
                 verificador1 = input("Oplção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
@@ -276,15 +276,15 @@ while verificador == "s" or verificador == "S":
 
             branco = int(input("\nDigite o número de votos brancos: "))
             while branco < 0 or branco > eleitores:
-                branco = int(input("\nDigite o número de votos brancos igual ou maior que 0: "))
+                branco = int(input("\nDigite o número de votos brancos igual ou maior que 0 e entre a quantidade de eleitores: "))
 
             nulo = int(input("\nDigite o número de votos nulos: "))
             while nulo < 0 or nulo > eleitores:
-                nulo = int(input("\nDigite o número de votos nulos igual ou maior que 0: "))
+                nulo = int(input("\nDigite o número de votos nulos igual ou maior que 0 e entre a quantidade de eleitores: "))
 
             valido = int(input("\nDigite o número de votos válidos: \n"))
             while valido < 0 or valido > eleitores:
-                valido = int(input("\nDigite o número de votos válidos igual ou maior que 0: \n"))
+                valido = int(input("\nDigite o número de votos válidos igual ou maior que 0 e entre a quantidade de eleitores: \n"))
 
             percentual_branco = (branco / eleitores) * 100
             percentual_nulo = (nulo / eleitores) * 100
@@ -296,7 +296,7 @@ while verificador == "s" or verificador == "S":
             print(f"Percentual de votos válidos: {percentual_valido:.2f}%")
             print("========================================================")
             
-            verificador1 = input("\nDeseja fazer uma nova verificação? (s/n)\n")
+            verificador1 = input("\nDeseja fazer uma nova verificação? (s/n) \n")
 
     elif ops == 11:
         verificador1 = "s"
@@ -324,7 +324,7 @@ while verificador == "s" or verificador == "S":
             if valor1 > valor2:
                 print(f"Ordem crescente: {valor2}, {valor1}")
             else:
-                print(f"Ordem crescente: {valor2}, {valor1}")
+                print(f"Ordem crescente: {valor1}, {valor2}")
 
             verificador1 = input("Deseja fazer um novo calculo? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
@@ -340,8 +340,8 @@ while verificador == "s" or verificador == "S":
                 hora_inicio = int(input("Digite a hora de início do jogo entre 1 e 24 horas: "))
 
             hora_fim = int(input("Digite a hora de fim do jogo: "))
-            while hora_fim <= 0 or hora_fim > 24:
-                hora_fim = int(input("Digite a hora de fim do jogo entre 1 e 24 horas: "))
+            while hora_fim <= 0 or hora_fim > 24 or hora_fim > hora_inicio:
+                hora_fim = int(input("Digite a hora de fim do jogo entre 1 e 24 horas e menor que a hora de inicio inicio: "))
 
             duracao = 0
             if hora_inicio == hora_fim:
@@ -375,8 +375,6 @@ while verificador == "s" or verificador == "S":
                 total = maca * duzia
 
             print(f"O custo total da compra de {maca} maçã(s) é de R$ {total:.2f}.")
-
-            verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
 
             verificador1 = input("Deseja fazer um novo calculo? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":

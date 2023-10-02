@@ -20,5 +20,9 @@ while verificador1 == "s" or verificador1 == "S":
     media = soma1 / quantidade1
     print(f"Sua média é: {media:.2f}")
     
-    verificador1 = input("Deseja fazer uma nova média? (s/n)")
+    verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+    while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
+        verificador = input("Oplção invalida, tente novamente...\n"
+                            "Deseja fazer um novo calculo? (s/n)")
+        
 print("Encerrando programa...")

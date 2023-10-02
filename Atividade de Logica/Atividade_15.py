@@ -11,7 +11,7 @@ while verificador == "s" or verificador == "S":
     if valor1 > valor2:
         print(f"Ordem crescente: {valor2}, {valor1}")
     else:
-        print(f"Ordem crescente: {valor2}, {valor1}")
+        print(f"Ordem crescente: {valor1}, {valor2}")
 
     verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
     while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
