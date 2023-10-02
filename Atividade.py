@@ -12,8 +12,12 @@ while verificador == "s" or verificador == "S":
     "8  - Antecessor e Sucessor          (9º e 10º questão)\n"
     "9  - Dias de vida                   (11º questão)\n"
     "10 - Percentual de eleição          (12º questão)\n"
-    "11 - \n"
-    "12 - \n"
+    "11 - Fahrenheit para Celsius        (14º questão)\n"
+    "12 - Ordem crescente                (15º questão)\n"
+    "13 - Tempo jogo Xadrez              (16º questão)\n"
+    "14 - Preço das Maças                (17º questão)\n"
+    "============================\n"
+    "0 - Encerrar Programa\n"
     "============================\n")
     ops = int(input("\nEscolha uma opção: "))
     print("")
@@ -295,3 +299,94 @@ while verificador == "s" or verificador == "S":
             verificador1 = input("\nDeseja fazer uma nova verificação? (s/n)\n")
 
     elif ops == 11:
+        verificador1 = "s"
+        while verificador1 == "s" or verificador1 == "S": 
+
+            fahrenheit = float(input("Digite a temperatura em graus Fahrenheit: "))
+
+            celsius = ((fahrenheit - 32) / 9) * 5
+
+            print(f"A temperatura em graus Celsius é: {celsius:.2f} °C")
+
+            verificador1 = input("Deseja fazer um novo calculo? (s/n)")
+            while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
+                verificador1 = input("Oplção invalida, tente novamente...\n"
+                                    "Deseja fazer um novo calculo? (s/n)")
+    elif ops == 12:
+        verificador1 = "s"
+        while verificador1 == "s" or verificador1 == "S": 
+
+            valor1 = float(input("Digite o primeiro valor: "))
+            valor2 = float(input("Digite o segundo valor: "))
+            while valor1 == valor2:
+                valor2 = float(input("Digite o segundo valor diferente do primeiro: "))
+
+            if valor1 > valor2:
+                print(f"Ordem crescente: {valor2}, {valor1}")
+            else:
+                print(f"Ordem crescente: {valor2}, {valor1}")
+
+            verificador1 = input("Deseja fazer um novo calculo? (s/n)")
+            while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
+                verificador1 = input("Oplção invalida, tente novamente...\n"
+                                    "Deseja fazer um novo calculo? (s/n)")
+            
+    elif ops == 13:
+        verificador1 = "s"
+        while verificador1 == "s" or verificador1 == "S": 
+
+            hora_inicio = int(input("Digite a hora de início do jogo: "))
+            while hora_inicio <= 0 or hora_inicio > 24:
+                hora_inicio = int(input("Digite a hora de início do jogo entre 1 e 24 horas: "))
+
+            hora_fim = int(input("Digite a hora de fim do jogo: "))
+            while hora_fim <= 0 or hora_fim > 24:
+                hora_fim = int(input("Digite a hora de fim do jogo entre 1 e 24 horas: "))
+
+            duracao = 0
+            if hora_inicio == hora_fim:
+                duracao = 24 
+            elif hora_inicio <= hora_fim:
+                duracao = hora_fim - hora_inicio
+            else:
+                duracao = (24 - hora_inicio) + hora_fim
+
+            print(f"A duração do jogo de xadrez foi de {duracao} horas.")
+
+            verificador1 = input("Deseja fazer um novo calculo? (s/n)")
+            while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
+                verificador1 = input("Oplção invalida, tente novamente...\n"
+                                    "Deseja fazer um novo calculo? (s/n)")
+                
+    elif ops == 14:
+        verificador1 = "s"
+        while verificador1 == "s" or verificador1 == "S": 
+
+            unitario = 1.30  
+            duzia = 1.00   
+
+            maca = int(input("Digite o número de maçãs compradas: "))
+            while maca <= 0:
+                maca = int(input("Digite o número de maçãs compradas diferente de 0: "))
+
+            if maca < 12:
+                total = maca * unitario
+            else:
+                total = maca * duzia
+
+            print(f"O custo total da compra de {maca} maçã(s) é de R$ {total:.2f}.")
+
+            verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
+
+            verificador1 = input("Deseja fazer um novo calculo? (s/n)")
+            while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
+                verificador1 = input("Oplção invalida, tente novamente...\n"
+                                    "Deseja fazer um novo calculo? (s/n)")
+                
+    elif ops == 0:
+        print("")
+        verificador = "n"
+    else: 
+        print("Opção invalida, tente novamente...")
+
+print("Encerrando programa...")      

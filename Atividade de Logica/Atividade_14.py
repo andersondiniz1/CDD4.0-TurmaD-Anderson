@@ -9,7 +9,8 @@ while verificador == "s" or verificador == "S":
 
     print(f"A temperatura em graus Celsius é: {celsius:.2f} °C")
 
-    verificador = input("Deseja fazer um novo calculo? (s/n)")
+    verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
     while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
         verificador = input("Oplção invalida, tente novamente...\n"
                             "Deseja fazer um novo calculo? (s/n)")
+print("Encerrando programa...")
