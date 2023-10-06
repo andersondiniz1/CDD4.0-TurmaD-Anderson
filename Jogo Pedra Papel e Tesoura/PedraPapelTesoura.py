@@ -118,3 +118,4 @@ while verificador == "s" or verificador == "S":
     # Encerrar programa        
     else:
         print("\n Encerrando o jogo...")
+        verificador = "n"
