@@ -1,4 +1,4 @@
-
+# Variaveis de jogadores e placar
 jogador1 = input("Digite o nome do 1º jogador: ")
 jogador2 = input("Digite o nome do 2º jogador: ")
 placar1 = 0
@@ -59,13 +59,14 @@ while verificador == "s" or verificador == "S":
         while primeiro != 1 and primeiro != 2:
             primeiro = int(input("Erro - Escolha 1 para o primeiro jogador ou 2 para o segundo jogador: (1 ou 2) \n"))
 
-        # Variavel ed seleção das opções dos jogadores e placar
+        # Variavel ed seleção das opções dos jogadores, quantidade de jogos e placar
         opc1 = "varivel de opção do jogador 1"
         opc2 = "varivel de opção do jogador 2"
+        quantidade1 = quantidade # Para não alterar a quantidade de jogos original
         placar1 = 0
         placar2 = 0
 
-        while placar1 < quantidade and placar2 < quantidade:
+        while quantidade1 != 0:
             # Primeiro jogador selecionado anteriormente escolhe entre pedra, papel ou tesoura
             if primeiro == 1:
                 opc1 = input(f"\nJogador {jogador1} escolha entre: pedra, papel ou tesoura: ")
@@ -89,23 +90,33 @@ while verificador == "s" or verificador == "S":
             # Condição de vitoria, empate e derrota
             if opc1 == opc2:
                 print(f"\nEmpate, jogador {jogador1} escolheu {opc1} e jogador {jogador2} escolheu {opc2}.")
+                quantidade1 -= quantidade1
             elif (opc1 == "pedra" and opc2 == "tesoura") or (opc1 == "papel" and opc2 == "pedra") or (opc1 == "tesoura" and opc2 == "papel"):
-                print(f"\nJogador {jogador1} venceu, {opc1} ganha de {opc2}.")
+                quantidade1 -= 1
+                print(f"\nJogador {jogador1} venceu, {opc1} ganha de {opc2}.\n"
+                      f"Jogos restantes: {quantidade1}")
                 placar1 += 1
+                
             else:
-                print(f"\nJogador {jogador2} venceu, {opc2} ganha de {opc1}.")
-                placar2 += 1
+                quantidade1 -= 1
+                print(f"\nJogador {jogador2} venceu, {opc2} ganha de {opc1} \n."
+                      f"Jogos restantes: {quantidade1}")
+                placar2 += 1           
 
             print("\n==========================\n"
                  f" {jogador1} X {jogador2}  \n"
                  f" {placar1} placar {placar2}\n"
                  f" Melhor de {quantidade}  \n"
+                 f"Jogos restantes: {quantidade1}\n"
                  "==========================\n")
             
-            if placar1 == quantidade:
+            if placar1 > placar2:
                 print(f"O jogador {jogador1} ganhou de {placar1} a {placar2}")
-            elif placar2 == quantidade:
+            elif placar2 > placar1:
                 print(f"O jogador {jogador2} ganhou de {placar2} a {placar1}")
+            else:
+                print(f"Empate entre o jogador {jogador1} e {jogador2} com placar de {placar1} a {placar2}")
+
 
         # verificador se deseja jogar novamente
         verificador = input("\nDeseja jogar novamente? (s/n)\n")
