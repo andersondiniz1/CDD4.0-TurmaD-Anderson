@@ -1,12 +1,6 @@
 # Perguntar ao usuário quantos alunos tem na sala e criar um array, unidimensional (Vetor) com o nome de todos os alunos da sala:
+# python "/workspaces/CDD4.0-TurmaD-Anderson/Atividade de Logica/Atividade Fixação Arrays 2º Simestre/Atividade_01.py"
 
-ArrayAlunos = []
-alunos = int(input("Quantidade de alunos? "))
+from Biblioteca import cadastro_alunos
 
-for i in range(alunos):
-    nome = input(f"Digite o nome do {i+1}º aluno: ")
-    ArrayAlunos.append(nome)
 
-print("Nomes dos alunos na sala:")
-for nome in ArrayAlunos:
-    print(nome)
