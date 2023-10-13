@@ -43,7 +43,7 @@ while verificador == "s" or verificador == "S":
             
             verificador1 = input("Deseja fazer uma nova média? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
             
     elif ops == 2:
@@ -60,7 +60,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer uma nova verificação? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
 
     elif ops == 3:
@@ -87,7 +87,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer uma nova verificação? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
 
     elif ops == 4:
@@ -107,7 +107,7 @@ while verificador == "s" or verificador == "S":
                 
             verificador1 = input("Deseja fazer uma nova verificação? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
 
     elif ops == 5:
@@ -125,7 +125,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer uma nova verificação? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
     
     elif ops == 6:
@@ -143,7 +143,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer uma nova verificação? (s/n)")     
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
 
     elif ops == 7:
@@ -172,7 +172,7 @@ while verificador == "s" or verificador == "S":
                 ops = "n"
                 verificador1 = input("Deseja fazer uma nova verificação? (s/n)")
                 while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                    verificador1 = input("Oplção invalida, tente novamente...\n"
+                    verificador1 = input("Opção invalida, tente novamente...\n"
                                          "Deseja fazer um novo calculo? (s/n)")
 
             elif ops == "r" or ops == "R": 
@@ -190,7 +190,7 @@ while verificador == "s" or verificador == "S":
                 ops = "n"
                 verificador1 = input("Deseja fazer uma nova verificação? (s/n)")
                 while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                    verificador1 = input("Oplção invalida, tente novamente...\n"
+                    verificador1 = input("Opção invalida, tente novamente...\n"
                                          "Deseja fazer um novo calculo? (s/n)")
             
             elif ops == "n" or ops == "N": 
@@ -224,7 +224,7 @@ while verificador == "s" or verificador == "S":
                     verificador2 = "n"
                     verificador1 = input("\nDeseja fazer uma nova verificação? (s/n) \n")
                     while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                        verificador1 = input("Oplção invalida, tente novamente...\n"
+                        verificador1 = input("Opção invalida, tente novamente...\n"
                                              "Deseja fazer um novo calculo? (s/n)")
                 elif ops == 3:
                     antecessor = numero - 1
@@ -232,7 +232,7 @@ while verificador == "s" or verificador == "S":
                     verificador2 = "n"
                     verificador1 = input("\nDeseja fazer uma nova verificação? (s/n) \n")
                     while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                        verificador1 = input("Oplção invalida, tente novamente...\n"
+                        verificador1 = input("Opção invalida, tente novamente...\n"
                                              "Deseja fazer um novo calculo? (s/n)")
                 elif ops == 0:
                     print("")
@@ -263,7 +263,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("\nDeseja fazer uma nova verificação? (s/n) \n")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                      "Deseja fazer um novo calculo? (s/n)")
 
     elif ops == 10:
@@ -310,7 +310,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer um novo calculo? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                     "Deseja fazer um novo calculo? (s/n)")
     elif ops == 12:
         verificador1 = "s"
@@ -328,7 +328,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer um novo calculo? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                     "Deseja fazer um novo calculo? (s/n)")
             
     elif ops == 13:
@@ -355,7 +355,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer um novo calculo? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                     "Deseja fazer um novo calculo? (s/n)")
                 
     elif ops == 14:
@@ -378,7 +378,7 @@ while verificador == "s" or verificador == "S":
 
             verificador1 = input("Deseja fazer um novo calculo? (s/n)")
             while verificador1 != "n" and verificador1 != "N" and verificador1 != "s" and verificador1 != "S":
-                verificador1 = input("Oplção invalida, tente novamente...\n"
+                verificador1 = input("Opção invalida, tente novamente...\n"
                                     "Deseja fazer um novo calculo? (s/n)")
                 
     elif ops == 0:

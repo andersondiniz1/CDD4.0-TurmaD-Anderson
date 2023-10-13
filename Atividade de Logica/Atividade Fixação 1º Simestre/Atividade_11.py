@@ -21,7 +21,7 @@ while verificador == "s" or verificador == "S":
 
     verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
     while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
-        verificador = input("Oplção invalida, tente novamente...\n"
+        verificador = input("Opção invalida, tente novamente...\n"
                             "Deseja fazer um novo calculo? (s/n)")
             
 print("Encerrando programa...")

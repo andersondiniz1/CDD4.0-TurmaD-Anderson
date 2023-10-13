@@ -25,7 +25,7 @@ while verificador == "s" or verificador == "S":
             verificador2 = "n"
             verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
             while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
-                verificador = input("Oplção invalida, tente novamente...\n"
+                verificador = input("Opção invalida, tente novamente...\n"
                                     "Deseja fazer um novo calculo? (s/n)")
         elif ops == 3:
             antecessor = numero - 1
@@ -33,7 +33,7 @@ while verificador == "s" or verificador == "S":
             verificador2 = "n"
             verificador = input("\nDeseja fazer um novo calculo? (s/n)\n")
             while verificador != "n" and verificador != "N" and verificador != "s" and verificador != "S":
-                verificador = input("Oplção invalida, tente novamente...\n"
+                verificador = input("Opção invalida, tente novamente...\n"
                                     "Deseja fazer um novo calculo? (s/n)")
         elif ops == 0:
             print("")
