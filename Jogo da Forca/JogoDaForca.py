@@ -17,9 +17,8 @@ while verificador in "sS":
         JogoDaForca()
 
     elif ops in "0":
-        verificador == "0"
+        verificador = "0"
         print("\nFinalizando o Jogo...")
-        break
-    
+
     else:
         print("\nOpção invalida, tente novamente...\n")

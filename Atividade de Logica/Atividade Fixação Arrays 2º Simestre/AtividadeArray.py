@@ -50,7 +50,7 @@ while verificador in "sS":
         verificador30numeros()
 
     elif ops == "0":
-        verificador == "n"
+        verificador = "n"
         print("Finalizando o programa...")
 
     else:
