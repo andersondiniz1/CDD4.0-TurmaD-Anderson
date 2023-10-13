@@ -234,30 +234,179 @@ def cadastro_usuarios():
 
 def soma_vetor():
 
+    # Variavel de repetição do codigo/aplicativo
+    verificador = "s"
+    while verificador in "sS":
 
-    N = int(input("N - Digite o tamano dos vetores A e B: "))
-    A = [0] * N
-    B = [0] * N
+        N = int(input("N - Digite o tamano dos vetores A e B: "))
+        A = [0] * N
+        B = [0] * N
 
-    print("================================\n"
-          "Digite os elementos do vetor A")
-    for i in range(N):
-        A[i] = int(input(f"{i + 1}º valor: "))
-    print("================================\n"
-          "Digite os elementos do vetor B:")
-    for i in range(N):
-        B[i] = int(input(f"{i + 1}º valor: "))
-    print("================================\n")
-          
-    Soma = [0] * N
+        print("================================\n"
+            "Digite os elementos do vetor A")
+        for i in range(N):
+            A[i] = int(input(f"{i + 1}º valor: "))
+        print("================================\n"
+            "Digite os elementos do vetor B:")
+        for i in range(N):
+            B[i] = int(input(f"{i + 1}º valor: "))
+        print("================================\n")
+            
+        Soma = [0] * N
 
-    for i in range(N):
-        Soma[i] = A[i] + B[i]
+        for i in range(N):
+            Soma[i] = A[i] + B[i]
 
-    print(f"Soma total: {Soma}")
+        print(f"Soma total: {Soma}")
 
-
+        verificador = input("Deseja fazer um novo calculo/soma? (s/n)")
+        while verificador not in "sSnN":
+            verificador = input("Opção inválida, tente novamente...\n"
+                                "Deseja fazer um novo calculo/soma? (s/n)")
 
 
 # FIM - Faça um código para ler um valor N qualquer (que será o tamanho dos vetores). Após, ler dois vetores A e B (de tamanho N cada um) e depois armazenar em um terceiro vetor Soma a soma dos elementos do vetor A com os do vetor B (respeitando as mesmas posições) e escrever o vetor Soma.
+# ========================================================================================================== #
+# INICIO - Faça um código para ler um vetor de 30 números. Após isto, ler mais um número qualquer, calcular e escrever quantas vezes esse número aparece no vetor.
+
+def contagem():
+
+    # Variavel de repetição do codigo/aplicativo
+    verificador = "s"
+    while verificador in "sS":
+
+        vetor = [0] * 30
+
+        for i in range(30):
+            vetor[i] = int(input(f"Digite o {i + 1}º número: "))
+
+        contado = int(input("Digite o número a ser contado: "))
+
+        contagem = 0
+
+        for numero in vetor:
+            if numero == contado:
+                contagem += 1
+
+        print(f"O número {contado} aparece {contagem} vezes no vetor.")
+
+        verificador = input("Deseja fazer uma nova verificação? (s/n)")
+        while verificador not in "sSnN":
+            verificador = input("Opção inválida, tente novamente...\n"
+                                "Deseja fazer uma nova verificação? (s/n)")
+            
+# FIM - Faça um código para ler um vetor de 30 números. Após isto, ler mais um número qualquer, calcular e escrever quantas vezes esse número aparece no vetor.
+# ========================================================================================================== #
+# INICIO - Escreva um algoritmo que solicite ao usuário a entrada de 5 nomes, e que exiba a lista desses nomes na tela.Após exibir essa lista, o programa deve mostrar também os nomes na ordem inversa em que o usuário os digitou, um por linha.
+
+def reverso():
+
+    # Variavel de repetição do codigo/aplicativo
+    verificador = "s"
+    while verificador in "sS":
+
+        nomes = []
+
+        for i in range(5):
+            nome = input(f"Digite o {i + 1}º nome: ")
+            nomes.append(nome)
+
+        print("================================\n"
+            "Nomes digitados\n"
+            "================================\n")
+        for nome in nomes:
+            print(nome)
+        print("================================\n")
+
+        print("================================\n"
+            "Nomes na ordem inversa\n"
+            "================================\n")
+        for i in range(len(nomes) - 1, -1, -1):
+            print(nomes[i])
+        print("================================\n")
+
+        verificador = input("Deseja fazer um novo reverso? (s/n)")
+        while verificador not in "sSnN":
+            verificador = input("Opção inválida, tente novamente...\n"
+                                "Deseja fazer umanovo reverso? (s/n)")
+
+# FIM - Escreva um algoritmo que solicite ao usuário a entrada de 5 nomes, e que exiba a lista desses nomes na tela.Após exibir essa lista, o programa deve mostrar também os nomes na ordem inversa em que o usuário os digitou, um por linha.
+# ========================================================================================================== #
+# INICIO - Faça um algoritmo que leia 30 valores do tipo inteiro e armazene-os em um vetor. A seguir, o algoritmo deverá informar (1) todos os números pares que existem no vetor; (2) o menor e o maior valor existente no vetor; (3) quantos dos valores do vetor são maiores que a média desses valores:
+
+def verificador30numeros():
+
+    vetor = [0] * 30
+
+    for i in range(30):
+        vetor[i] = int(input(f"Digite o {i + 1}º número: "))
+
+    verificador = "s"
+    while verificador in "sS":
+        # Menu e variavel de opções de seleção
+        print("\n\n============================\n"
+            "1 - Digitar os 30 numeros novamente\n"
+            "2 - Números pares\n"
+            "3 - Menor e o Maior Número\n"
+            "4 - Média dos Valres\n"
+            "0 - Sair do programa\n"
+            "============================\n")
+        ops = input("\nEscolha uma opção: ")
+        while ops not in "12340":
+            ops = input("\nOpção invalida, tente novamente...\n"
+                        "Escolha uma opção acima: ")
+
+    if ops == "1":
+        vetor = [0] * 30
+
+        for i in range(30):
+            vetor[i] = int(input(f"Digite o {i + 1}º número: "))
+
+    # (1) Todos os números pares que existem no vetor.
+    elif ops == "2":
+        pares = []
+
+        for numero in vetor:
+            if numero % 2 == 0:
+                pares.append(numero)
+        print(f"Números pares no vetor: {pares}")
+
+    # (2) o menor e o maior valor existente no vetor.
+    elif ops == "3":
+        menor_valor = vetor[0]
+        maior_valor = vetor[0]
+
+        for numero in vetor:
+            if numero < menor_valor:
+                menor_valor = numero
+            if numero > maior_valor:
+                maior_valor = numero
+
+        print(f"Menor valor: {menor_valor}")
+        print(f"Maior valor: {maior_valor}")
+
+    # (3) quantos dos valores do vetor são maiores que a média desses valores.
+    elif ops == "4":
+        
+        soma = 0
+        for numero in vetor:
+            soma += numero
+        media = soma / len(vetor)
+
+        # Conta quantos valores no vetor são maiores que a média
+        contador = 0
+        for numero in vetor:
+            if numero > media:
+                contador += 1
+
+        print(f"Valores maiores que a média: {contador}")
+
+    elif ops == "0":
+        verificador == "n"
+        print("Finalizando o programa...")
+
+    else:
+        print("\nOpção invalida, tente novamente...\n")
+        
+# FIM - Faça um algoritmo que leia 30 valores do tipo inteiro e armazene-os em um vetor. A seguir, o algoritmo deverá informar (1) todos os números pares que existem no vetor; (2) o menor e o maior valor existente no vetor; (3) quantos dos valores do vetor são maiores que a média desses valores:
 # ========================================================================================================== #
