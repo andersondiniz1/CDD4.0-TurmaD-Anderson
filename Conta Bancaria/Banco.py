@@ -1,5 +1,6 @@
 from Biblioteca import ContaBancaria
 
+# cria conta
 def criar_conta():
 
     print("=============================")
@@ -19,6 +20,7 @@ def main():
     # Lista para armazenar as contas
     contas = []  
 
+    # menu
     while True:
         print("=============================\n"
               "Escolha uma ação:\n"
@@ -28,19 +30,23 @@ def main():
               "0. Sair\n"
               "=============================\n")
         
+        # repetição se escolhe errado
         escolha = input("Opção: ")
         while escolha not in ["1", "2", "0"]:
             escolha = input("\nOpção invalida, tente novamente: ")
 
+        # criar conta
         if escolha == "1":
             nova_conta = criar_conta()
             contas.append(nova_conta)
             print("\nConta criada com sucesso!")
 
+        # verificar conta por conta para saber se o digitado pelo usuario coincide
         elif escolha == "2":
             numero_conta = int(input("Digite o número da conta: "))
             conta = next((c for c in contas if c.numero == numero_conta), None)
 
+            # se econtrar conta digitada
             if conta:
                 print(f"Conta encontrada: {conta.nome}")
 
@@ -52,11 +58,12 @@ def main():
                           "2. Sacar\n"
                           "3. Verificar saldo\n"
                           "4. Desativar conta\n"
+                          "5. Ativar conta\n"
                           "0. Sair\n"
                           "=============================\n")
                     
                     escolha = input("Opção: ")
-                    while escolha not in ["1", "2", "3", "4", "0"]:
+                    while escolha not in ["1", "2", "3", "4", "5", "0"]:
                         escolha = input("\nOpção invalida, tente novamente: ")
 
                     if escolha == "1":
@@ -75,6 +82,11 @@ def main():
                         print("\nConta desativada.")
                         break
 
+                    elif escolha == "5":
+                        conta.ativar_conta()
+                        print("\nConta desativada.")
+                        break
+
                     elif escolha == "0":
                         print("\nEncerrando a conta.")
                         break
@@ -82,6 +94,7 @@ def main():
                     else:
                         print("\nOpção inválida. Tente novamente.")
 
+            # se não encontrar a conta
             else:
                 print("\nConta não encontrada...")
 

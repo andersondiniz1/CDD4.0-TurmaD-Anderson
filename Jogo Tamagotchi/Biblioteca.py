@@ -6,17 +6,17 @@ class Tamagotchi:
         self.saude = 100
 
     def alimentar(self):
-        self.fome -= 10
+        self.fome -= 20
         if self.fome < 0:
             self.fome = 0
 
     def brincar(self):
-        self.felicidade += 10
+        self.felicidade += 20
         if self.felicidade > 100:
             self.felicidade = 100
 
     def curar(self):
-        self.saude += 10
+        self.saude += 20
         if self.saude > 100:
             self.saude = 100
 
