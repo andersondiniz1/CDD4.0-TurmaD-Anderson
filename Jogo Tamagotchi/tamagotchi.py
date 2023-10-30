@@ -1,8 +1,5 @@
 from Biblioteca import Tamagotchi
 
-# repetição do menu lá embaixo
-menu = True
-
 def main():
     # Digitar o nome do bicho
     nome = input("Nome do seu Tamagotchi: ")
@@ -40,9 +37,8 @@ def main():
         elif acao == "curar":
             bichinho.curar()
         elif acao == "sair":
-            menu = True
             print("========================\n"
-                  "Desligando Tamagotchi, voltando para menu...\n"
+                  "Desligando Tamagotchi...\n"
                   "========================\n")
             break
 
@@ -53,11 +49,12 @@ def main():
 
     # Se o loop "while bichinho.esta_vivo():" ficar false, fica se algum status do bicho passar do limite
     if not bichinho.esta_vivo():
-        menu = True
         print("========================\n"
             f"{bichinho.nome} morreu. O jogo acabou, voltando para o menu...\n"
             "========================\n")
 
+# repetição do menu lá embaixo
+menu = True
 
 while menu:
     # Menu do jogo
