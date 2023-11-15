@@ -84,7 +84,7 @@ def main():
 
                     elif escolha == "5":
                         conta.ativar_conta()
-                        print("\nConta desativada.")
+                        print("\nConta ativada.")
                         break
 
                     elif escolha == "0":
