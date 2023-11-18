@@ -225,8 +225,79 @@ def acessar_conta_funcionario():
 # | 142 - INICIO | 226 - FIM | Acessar contas existentes.           |
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
 
+
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
-# | 173 - INICIO | 186 - FIM | Fechar conexão com o banco de dados. |
+# | 230 - INICIO | 294 - FIM | Deletar registros.                   |
+# |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
+
+def deletar_registro_aluno():
+    banco = sqlite3.connect('banco_alunos.db')
+    meucursor = banco.cursor()
+
+    matricula = int(input("Digite a matrícula do aluno que deseja deletar: "))
+
+    deletar_dados_aluno = f'''
+        DELETE FROM alunos WHERE matricula = {matricula};
+    '''
+    meucursor.execute(deletar_dados_aluno)
+
+    banco.commit()
+    banco.close()
+    print("Registro deletado com sucesso!")
+
+def deletar_registro_modalidade():
+    banco = sqlite3.connect('banco_alunos.db')
+    meucursor = banco.cursor()
+
+    id_mod = int(input("Digite o ID da modalidade que deseja deletar: "))
+
+    deletar_dados_modalidade = f'''
+        DELETE FROM modalidades WHERE id_mod = {id_mod};
+    '''
+    meucursor.execute(deletar_dados_modalidade)
+
+    banco.commit()
+    banco.close()
+    print("Registro deletado com sucesso!")
+
+def deletar_registro_personal():
+    banco = sqlite3.connect('banco_alunos.db')
+    meucursor = banco.cursor()
+
+    cref = int(input("Digite o CREF do personal que deseja deletar: "))
+
+    deletar_dados_personal = f'''
+        DELETE FROM personal WHERE cref = {cref};
+    '''
+    meucursor.execute(deletar_dados_personal)
+
+    banco.commit()
+    banco.close()
+    print("Registro deletado com sucesso!")
+
+def deletar_registro_funcionario():
+    banco = sqlite3.connect('banco_alunos.db')
+    meucursor = banco.cursor()
+
+    id_funcionario = int(input("Digite o ID do funcionário que deseja deletar: "))
+
+    deletar_dados_funcionario = f'''
+        DELETE FROM funcionario WHERE id_funcionario = {id_funcionario};
+    '''
+    meucursor.execute(deletar_dados_funcionario)
+
+    banco.commit()
+    banco.close()
+    print("Registro deletado com sucesso!")
+
+# |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
+# | 230 - INICIO | 294 - FIM | Deletar registros.                   |
+# |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
+
+
+
+# |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
+# | 300 - INICIO | 312 - FIM | Fechar conexão com o banco de dados. |
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
 
 def sair_banco():
@@ -237,5 +308,5 @@ def sair_banco():
     banco.close()
 
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
-# | 173 - INICIO | 186 - FIM | Fechar conexão com o banco de dados. |
+# | 300 - INICIO | 312 - FIM | Fechar conexão com o banco de dados. |
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
