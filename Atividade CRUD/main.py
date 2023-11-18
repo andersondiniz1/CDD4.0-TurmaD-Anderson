@@ -1,4 +1,19 @@
-from crud import inserir_aluno, acessar_conta, sair_banco
+# ///////////////////////////////////////////////////////////////////////////
+# //            PROJETO - CADASTRO ACADEMIA | main.py - Menu               //
+# ///////////////////////////////////////////////////////////////////////////
+# // Registro de Alterações:                                               //
+# // 18/11/2023 | Criação inicial do script.                               //
+# // 00/00/0000 |                                                          //
+# // 00/00/0000 |                                                          //
+# // 00/00/0000 |                                                          //
+# ///////////////////////////////////////////////////////////////////////////
+# // Desenvolvedores:  Anderson Celso Menzes Diniz Ribeiro                 //
+# //                   Kelvyn Luiz Peixoto de Freitas                      //
+# //                                                                       //
+# //                                                                       //
+# ///////////////////////////////////////////////////////////////////////////
+
+from crud import criar_e_inserir_aluno, criar_e_inserir_modalidade, criar_e_inserir_personal, criar_e_inserir_funcionario, acessar_conta, sair_banco
 
 while True:
         print("=============================\n"
@@ -33,15 +48,21 @@ while True:
                 escolha = input("\nOpção invalida, tente novamente: ")
 
             if escolha == "1":
-                inserir_aluno()
+                criar_e_inserir_aluno()
                 print("\nConta aluno criada com sucesso!")
 
             if escolha == "2":
-                print("\nConta aluno criada com sucesso!")
+                criar_e_inserir_modalidade()
+                print("\nConta modalidade criada com sucesso!")
+
             elif escolha == "3":
-                print("\nConta aluno criada com sucesso!")
+                criar_e_inserir_funcionario()
+                print("\nConta funcionario criada com sucesso!")
+
             elif escolha == "4":
-                print("\nConta aluno criada com sucesso!")
+                criar_e_inserir_personal()
+                print("\nConta personal criada com sucesso!")
+
             elif escolha == "0":
                 print("\nVoltando para o menu!")
                 break
