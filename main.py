@@ -13,7 +13,7 @@
 # //                                                                       //
 # ///////////////////////////////////////////////////////////////////////////
 
-from crud import criar_e_inserir_aluno, criar_e_inserir_modalidade, criar_e_inserir_personal, criar_e_inserir_funcionario, acessar_conta, sair_banco
+from crud import criar_e_inserir_aluno, criar_e_inserir_modalidade, criar_e_inserir_personal, criar_e_inserir_funcionario, acessar_conta_alunos, acessar_conta_modalidade, acessar_conta_personal, acessar_conta_funcionario, sair_banco
 
 while True:
         print("=============================\n"
@@ -69,7 +69,38 @@ while True:
 
         # verificar contas existentes
         elif escolha == "2":
-            acessar_conta()
+
+            print("=============================\n"
+                "Bem vindo ao consultar tabelas academia CDD:\n"
+                "=============================\n"
+                "1. Tabela alunos\n"
+                "2. Tabela modalidade\n"
+                "3. Tabela funcionarios\n"
+                "4. Tabela Personal\n"
+                "0. Voltar ao menu principal\n"
+                "=============================\n")
+            
+            # repetição se escolher opção errado
+            escolha = input("Opção: ")
+            while escolha not in ["1", "2", "3", "4", "0"]:
+                escolha = input("\nOpção invalida, tente novamente: ")
+
+            if escolha == "1":
+                acessar_conta_alunos()
+
+            if escolha == "2":
+                acessar_conta_modalidade()
+
+            elif escolha == "3":
+                acessar_conta_funcionario()
+
+            elif escolha == "4":
+                acessar_conta_personal()
+
+            elif escolha == "0":
+                print("\nVoltando para o menu!")
+                break
+
 
         # Sair do programa
         elif escolha == "0":

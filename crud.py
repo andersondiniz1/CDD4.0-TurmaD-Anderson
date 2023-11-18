@@ -140,10 +140,10 @@ def criar_e_inserir_funcionario():
 
 
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
-# | 142 - INICIO | 171 - FIM | Acessar contas existentes.           |
+# | 142 - INICIO | 226 - FIM | Acessar contas existentes.           |
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
 
-def acessar_conta():
+def acessar_conta_alunos():
 
     # Conectar ao banco de dados
     banco = sqlite3.connect('banco_alunos.db')
@@ -166,8 +166,63 @@ def acessar_conta():
         print("Telefone:", linha[3])
         print("======================\n")
 
+def acessar_conta_modalidade():
+    banco = sqlite3.connect('banco_alunos.db')
+    meucursor = banco.cursor()
+
+    pesquisa = "SELECT id_mod, nome FROM modalidades;"
+    meucursor.execute(pesquisa)
+    resultado = meucursor.fetchall()
+
+    for linha in resultado:
+        print("======================")
+        print("ID da Modalidade:", linha[0])
+        print("Nome da Modalidade:", linha[1])
+        print("======================\n")
+
+    banco.close()
+
+def acessar_conta_personal():
+    banco = sqlite3.connect('banco_alunos.db')
+    meucursor = banco.cursor()
+
+    pesquisa = "SELECT cpf, cref, nome, telefone, email FROM personal;"
+    meucursor.execute(pesquisa)
+    resultado = meucursor.fetchall()
+
+    for linha in resultado:
+        print("======================")
+        print("CPF do Personal:", linha[0])
+        print("CREF do Personal:", linha[1])
+        print("Nome do Personal:", linha[2])
+        print("Telefone do Personal:", linha[3])
+        print("Email do Personal:", linha[4])
+        print("======================\n")
+
+    banco.close()
+
+def acessar_conta_funcionario():
+    banco = sqlite3.connect('banco_alunos.db')
+    meucursor = banco.cursor()
+
+    pesquisa = "SELECT id_funcionario, nome, cpf, departamento, cpf_supervisor, salario FROM funcionario;"
+    meucursor.execute(pesquisa)
+    resultado = meucursor.fetchall()
+
+    for linha in resultado:
+        print("======================")
+        print("ID do Funcionário:", linha[0])
+        print("Nome do Funcionário:", linha[1])
+        print("CPF do Funcionário:", linha[2])
+        print("Departamento do Funcionário:", linha[3])
+        print("CPF do Supervisor:", linha[4])
+        print("Salário do Funcionário:", linha[5])
+        print("======================\n")
+
+    banco.close()
+
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
-# | 142 - INICIO | 171 - FIM | Acessar contas existentes.           |
+# | 142 - INICIO | 226 - FIM | Acessar contas existentes.           |
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
 
 # |\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|
